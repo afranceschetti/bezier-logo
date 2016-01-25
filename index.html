@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="app.css">
+		<link rel="shortcut icon" href="favico.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<script src="app.js"></script>
+		<title>Bezier Logo </title>
+	</head>
+	<body>
+		<div id='container'>
+			<div id='logocontainer' style='display:none'>
+				<canvas id='logocanvas'></canvas>
+				<div id='mask'></div>
+				<div id='maskStructure' style='display:none'></div>
+			</div>
+			<div id='loadingPanel'>
+				<p>Creation in progress</p>
+				<p>Please wait</p>
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
+			</div>
+		</div>
+		<div id='sidebar'>
+			<table>
+				<tbody>
+					<tr><td colspan='2'><h3>Customization</h3></td></tr>
+					<tr><td colspan='2' class='subtitle'><strong>Lines</strong></td></tr>
+					<tr><td><label'>Color</label></td><td><input type="color" id='lineColor' value="#ffffff" ></td></tr>
+					<tr><td><label>Number of Lines</label></td><td><input type='number' class='input-number' min="4" max="20" value="13" id="numOfLines"></input></td></tr>
+					<tr><td colspan='2' class='subtitle'><strong>Stretch</strong></td></tr>
+					<tr><td><label>Horizontal</label></td><td><input type="range" min="1" max="16"  id='stretchH' value="10"></input></td></tr>
+					<tr><td><label>Vertical</label></td><td><input type="range" min="1" max="16"  id='stretchV' value="10"></td></tr>
+					<tr><td colspan='2' class='subtitle'><strong>Base colors</strong></td></tr>
+					<tr><td><label>Number of Colors</label></td><td><input type='number' class='input-number' id='numOfColor' min="1" max="6" value="6"></input></td></tr>
+					<tr><td class='text-center'><label>Color 1</label></td><td><input type="color" id='color_0' value="#55b9fc" id='color_0'></td></tr>
+					<tr><td class='text-center'><label>Color 2</label></td><td><input type="color" id='color_1' value="#916ab1" id='color_1'></td></tr>
+					<tr><td class='text-center'><label>Color 3</label></td><td><input type="color" id='color_2' value="#f04090" id='color_2'></td></tr>
+					<tr><td class='text-center'><label>Color 4</label></td><td><input type="color" id='color_3' value="#8fca40" id='color_3'></td></tr>
+					<tr><td class='text-center'><label>Color 5</label></td><td><input type="color" id='color_4' value="#fff43b" id='color_4'></td></tr>
+					<tr><td class='text-center'><label>Color 6</label></td><td><input type="color" id='color_5' value="#f29524"id='color_5'></td></tr>
+				</tbody>
+			</table>
+			<div class='button-refresh'>
+				<button id='refreshBtn'>Refresh</button>
+			</div>
+			
+			</div>
+		<div id='toolbar'>
+			<div class='logo-panel'>
+				<h1>
+					<div class='favicon favicon_top'>
+						<div class='favicon_slice favicon_1'></div>
+						<div class='favicon_slice favicon_2'></div>
+						<div class='favicon_slice favicon_3'></div>
+						<div class='favicon_slice favicon_4'></div>
+					</div>
+				
+					Bezier Logo
+				</h1>
+			</div>
+			<div class='credits-toolbar-panel'>
+				<a href='#' class='credits-link' id='open_credits_link'>Credits</a> &nbsp; <a id='close_toolbar_link' href='#'>&times;</a></div>	
+			<div class='choose-color-panel'>
+				<a href="#" id="showstructure">Show structure</a>
+				<a href="#" id="showlogo" style='display:none'>Show logo</a>
+			</div>
+		</div>
+		<div id='hint'>No image <br>is used on <br>this site!</div>
+		<div id='credits-panel' style='display: none;' >
+			<div  id='close_credits_link'><a href='#'>&times;</a></div>
+			<h1 class='credits-logo'>
+					<div class='favicon favicon_info'>
+						<div class='favicon_slice favicon_1'></div>
+						<div class='favicon_slice favicon_2'></div>
+						<div class='favicon_slice favicon_3'></div>
+						<div class='favicon_slice favicon_4'></div>
+					</div>
+				<span>Bezier Logo</span>
+			</h1>
+			<p>
+				Created by 	<a href='https://github.com/afranceschetti/' class='credits-link' target='_blank'>Alessandro Franceschetti</a>
+			</p>
+			<p>
+				Source code	<a href='https://github.com/afranceschetti/bezier-logo' class='credits-link' target='_blank'>here</a>
+			</p>
+		</div>
+		<script src="lib/bezier.js"></script>
+		<script src="js/draw.js"></script>
+		<script src="js/interaction.js"></script>
+		<!--script src="js/loader.js"></script-->
+	</body>
+</html>

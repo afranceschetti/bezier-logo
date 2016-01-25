@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Quicksand);
+
+body{color: #000; background-color: #fff; margin:40px auto;padding:0;  font-family: Quicksand;}
+
+a{color:#9D9D9D	; text-decoration: none;}
+a:hover{color: #fff;}
+
+input{margin-right: 1em; border-radius: 4px;}
+
+#logocontainer{position: relative; width: 600px; height: 600px;display: block;margin: auto;border: solid 0px lightgray;}
+#mask{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(50% 50%, circle, transparent 50%, #fff 0%);
+  background: -moz-radial-gradient(50% 50%, circle, transparent 50%, #fff 0%);
+  background: radial-gradient(50% 50%, circle, transparent 50%, #fff 0%);
+  margin: 0 auto;
+}
+
+#maskStructure{
+  position: absolute;
+  top: 15%;
+  left:15%;
+  width: 70%;
+  height: 70%;
+  border: solid 1px red;
+  border-radius: 100%;
+  }
+
+#loadingPanel{text-align: center; font-size: 3em;margin-top:50px; padding-top: 50px;}
+#loadingPanel p{margin: 1em;}
+
+#sidebar{
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	padding: 40px 20px;
+	height: 100%;
+	width: 250px;
+	background-color: #efefef;
+	border-right: solid 1px #d3d7cf;
+}
+
+#sidebar table{width: 100%;}
+#sidebar table td{padding: .2em;}
+#sidebar .input-number{width:50px;}
+#sidebar .button-refresh{text-align: center; padding-top: 1em;}
+#sidebar .button-refresh button{ font-size: 1.2em; padding: .5em 2em;}
+#sidebar .subtitle{padding-top: .5em;}
+
+#toolbar {
+    width: 100%;
+    font-weight: 400;
+    height: auto;
+    padding: 10px 0px;
+    font-size: 18px;
+    line-height: 24px;
+    background: #222;
+    top: 0;
+    position: fixed;
+    color: #9D9D9D;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+}
+#hint{position: absolute; color: lightgray; font-family: 'Gloria Hallelujah', cursive;font-size:2em;   
+	transform: rotate(30deg); top: 100px; right: 20px;width: 200px; text-align: center;}
+
+.text-right{text-align: right;}
+.text-center{text-align: center;}
+.logo-panel{padding: 0 20px;float: left;}
+.logo-panel img{height: 24px; width: auto;}
+.logo-panel h1{padding: 0; margin: 0; font-size: 24px; font-weight: 700; color: #fff;}
+
+.choose-color-panel{padding: 0 40px 0 20px;float: right;}
+
+.credits-toolbar-panel{	padding: 0 20px 0 40px;	border-left: 1px solid white;float: right;}
+.credits-toolbar-panel .credits-link{color: #d80073;}
+.credits-toolbar-panel a:hover{	color: #E257A0;}
+
+#credits-panel{
+	color: white;
+	position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:13em;
+    margin-top: -6em; 
+    margin-left: -15em;
+    border: 0px solid #E257A0;
+    background-color: #222;
+    padding: 1em;
+}
+
+#credits-panel a{color: #1ba1e2;}
+#credits-panel .credits-logo{margin-bottom:1em;}
+#credits-panel .credits-logo img{height:3em; width: auto;}
+#credits-panel .credits-logo span{font-size:1.5em; }
+#close_credits_link{text-align: right; 	font-size: 2em; width: 4em; position: absolute; top:.2em; right: .5em;}
+#close_credits_link a{color: #9D9D9D;}
+#close_credits_link a:hover{color: #fff;}
+
+
+.favicon{position: relative; display: inline-block;}
+.favicon_slice{width: 50%; height: 50%; position: absolute}
+.favicon_1{background-color: #55b9fc; top:0; left: 0; border-top-left-radius: 100%}
+.favicon_2{background-color: #916ab1;top:0; right:0; border-top-right-radius: 100%}
+.favicon_3{background-color: #f04090;bottom:0; right: 0; border-bottom-right-radius: 100%}
+.favicon_4{background-color: #8fca40;bottom:0; left: 0; border-bottom-left-radius: 100%}
+
+.favicon_top{width: 32px; height: 32px;}
+.favicon_info{width: 64px; height: 64px;}
+
+
+.spinner {
+  margin: 0 auto 0;
+  width: 200px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
